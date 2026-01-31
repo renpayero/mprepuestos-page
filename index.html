@@ -10,12 +10,32 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Critical CSS Inline -->
+    <style>
+      :root{--bg:#05070a;--surface:#0e1117;--surface-bright:#161b22;--primary:#0066ff;--primary-glow:rgba(0,102,255,0.4);--secondary:#ff3333;--secondary-glow:rgba(255,51,51,0.3);--text:#ffffff;--text-muted:#9ca3af;--border:rgba(255,255,255,0.08);--border-bright:rgba(255,255,255,0.15);--radius-lg:24px;--radius-md:16px;--font-main:"Plus Jakarta Sans",sans-serif;--font-heading:"Space Grotesk",sans-serif;--transition:all 0.4s cubic-bezier(0.23,1,0.32,1);--shadow-sm:0 1px 2px 0 rgb(0 0 0/0.3);--shadow-md:0 4px 6px -1px rgb(0 0 0/0.4),0 2px 4px -2px rgb(0 0 0/0.4);--shadow-lg:0 20px 25px -5px rgb(0 0 0/0.5),0 8px 10px -6px rgb(0 0 0/0.5)}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;font-size:16px}body{background-color:var(--bg);color:var(--text);font-family:var(--font-main);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}.grain{display:none;position:fixed;top:0;left:0;width:100%;height:100%;opacity:.04;pointer-events:none;z-index:9999;background:repeating-conic-gradient(#000 0.0001%,transparent 0.0002%,transparent 0.0003%,#000 0.0004%) 50% 50%/1000px 1000px}@media (min-width:769px){.grain{display:block}}.container{max-width:1280px;margin:0 auto;padding:0 40px}header{position:fixed;top:0;width:100%;z-index:100;padding:24px 0;background:rgba(5,7,10,.9);border-bottom:1px solid var(--border);will-change:transform}@media (min-width:769px){header{background:rgba(5,7,10,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}}.nav-wrapper{display:flex;justify-content:space-between;align-items:center}.logo{font-family:var(--font-heading);font-weight:700;font-size:1.5rem;letter-spacing:-.04em;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:4px}.logo .mp{color:var(--primary)}.logo .repuestos{color:var(--secondary)}.nav-links{display:flex;gap:40px;list-style:none}.nav-links a{text-decoration:none;color:var(--text-muted);font-weight:500;font-size:.9rem;transition:var(--transition)}.nav-links a:hover{color:var(--text)}.header-right{display:flex;align-items:center;gap:20px}.btn{padding:12px 24px;border-radius:var(--radius-md);font-weight:600;font-size:.9rem;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:var(--transition);cursor:pointer}.btn-primary{background:var(--primary);color:#fff;box-shadow:0 8px 24px -6px var(--primary-glow)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 32px -4px var(--primary-glow)}.btn-secondary{background:var(--surface);color:var(--text);border:1px solid var(--border)}.btn-secondary:hover{background:var(--surface-bright)}.btn-nav{background:var(--primary);color:#fff;padding:10px 20px;border-radius:30px;box-shadow:0 4px 12px var(--primary-glow)}.hero{padding:200px 0 120px;background-image:radial-gradient(circle at 80% 20%,rgba(0,102,255,.06) 0,transparent 40%)}.hero-container{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.badge{display:inline-block;padding:6px 12px;background:rgba(0,102,255,.1);color:var(--primary);font-size:.75rem;font-weight:700;letter-spacing:.1em;border-radius:100px;margin-bottom:24px}.hero-title{font-family:var(--font-heading);font-size:5rem;line-height:.95;font-weight:700;letter-spacing:-.05em;margin-bottom:24px}.hero-title span{color:var(--primary);font-style:italic}.hero-subtitle{font-size:1.25rem;color:var(--text-muted);max-width:500px;margin-bottom:40px}.hero-actions{display:flex;gap:16px}.hero-visual{position:relative}.image-mask{width:100%;aspect-ratio:1;background:var(--surface);border-radius:40% 60% 70% 30%/40% 50% 60% 50%;overflow:hidden;border:1px solid var(--border)}.image-mask img{width:100%;height:100%;object-fit:cover;filter:grayscale(.2) contrast(1.1)}.accent-blob{position:absolute;top:-10%;right:-10%;width:60%;height:60%;background:var(--primary);filter:blur(100px);opacity:.1;z-index:-1}@media (max-width:1024px){.hero-container{grid-template-columns:1fr;text-align:center;gap:40px}.hero-title{font-size:4rem}.hero-subtitle{margin:0 auto 40px}.hero-actions{justify-content:center}.hero-visual{max-width:500px;margin:0 auto;aspect-ratio:1;contain:layout}}@media (max-width:640px){.container{padding:0 24px}.hero-title{font-size:3rem}.nav-links{display:none}}
+    </style>
+
+    <!-- Async Font Loading -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
-    <link rel="stylesheet" href="styles.css?v=1.3" />
-    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Deferred Main Styles -->
+    <link rel="preload" href="styles.css?v=1.6" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css?v=1.6"></noscript>
+
+    <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/favicon-16.png" sizes="16x16" />
   </head>
   <body>
     <div class="grain"></div>
@@ -60,7 +80,16 @@
           </div>
           <div class="hero-visual">
             <div class="image-mask">
-              <img src="assets/hero-v5.png" alt="MP Repuestos Hero" />
+              <picture>
+                <source srcset="assets/hero-v5-mobile.webp 500w, assets/hero-v5.webp 1024w" sizes="(max-width: 640px) calc(100vw - 48px), (max-width: 1024px) 100vw, 50vw" type="image/webp" />
+                <img 
+                  src="assets/hero-v5.png" 
+                  alt="MP Repuestos Hero" 
+                  width="1024" 
+                  height="1024"
+                  fetchpriority="high"
+                />
+              </picture>
             </div>
             <div class="accent-blob"></div>
           </div>
@@ -75,74 +104,24 @@
           </div>
           <div class="marquee">
             <div class="marquee-content">
-              <!-- Original 8 items -->
-              <div class="brand-item">
-                <img
-                  src="assets/Logos/Whirlpool_Corporation_Logo.png"
-                  alt="Whirlpool"
-                />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/Drean-logo.png" alt="Drean" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/Longvie.png" alt="Longvie" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/logo-Gafa-nuevo.png" alt="Gafa" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/logo-Electrolux.png" alt="Electrolux" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/Patrick-logo.png" alt="Patrick" />
-              </div>
-              <div class="brand-item">
-                <img
-                  src="assets/Logos/KOH-I-NOOR_2025_efectos_alta.png"
-                  alt="Kohinoor"
-                />
-              </div>
-              <div class="brand-item">
-                <img
-                  src="assets/Logos/121-1211603_transparent-general-electric-logo-png-general-electric-company.png"
-                  alt="General Electric"
-                />
-              </div>
-              <!-- Duplicate for seamless loop -->
-              <div class="brand-item">
-                <img
-                  src="assets/Logos/Whirlpool_Corporation_Logo.png"
-                  alt="Whirlpool"
-                />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/Drean-logo.png" alt="Drean" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/Longvie.png" alt="Longvie" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/logo-Gafa-nuevo.png" alt="Gafa" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/logo-Electrolux.png" alt="Electrolux" />
-              </div>
-              <div class="brand-item">
-                <img src="assets/Logos/Patrick-logo.png" alt="Patrick" />
-              </div>
-              <div class="brand-item">
-                <img
-                  src="assets/Logos/KOH-I-NOOR_2025_efectos_alta.png"
-                  alt="Kohinoor"
-                />
-              </div>
-              <div class="brand-item">
-                <img
-                  src="assets/Logos/121-1211603_transparent-general-electric-logo-png-general-electric-company.png"
-                  alt="General Electric"
-                />
-              </div>
+              <!-- Replaced with simplified items for brevity in tool output, but logic is consistent -->
+              <div class="brand-item"><picture><source srcset="assets/Logos/Whirlpool_Corporation_Logo.webp" type="image/webp" /><img src="assets/Logos/Whirlpool_Corporation_Logo.png" alt="Whirlpool" width="200" height="67" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/Drean-logo.webp" type="image/webp" /><img src="assets/Logos/Drean-logo.png" alt="Drean" width="150" height="35" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/Longvie.webp" type="image/webp" /><img src="assets/Logos/Longvie.png" alt="Longvie" width="199" height="32" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/logo-Gafa-nuevo.webp" type="image/webp" /><img src="assets/Logos/logo-Gafa-nuevo.png" alt="Gafa" width="130" height="54" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/logo-Electrolux.webp" type="image/webp" /><img src="assets/Logos/logo-Electrolux.png" alt="Electrolux" width="384" height="216" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/Patrick-logo.webp" type="image/webp" /><img src="assets/Logos/Patrick-logo.png" alt="Patrick" width="152" height="41" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/KOH-I-NOOR_2025_efectos_alta.webp" type="image/webp" /><img src="assets/Logos/KOH-I-NOOR_2025_efectos_alta.png" alt="Kohinoor" width="100" height="42" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/121-1211603_transparent-general-electric-logo-png-general-electric-company.webp" type="image/webp" /><img src="assets/Logos/121-1211603_transparent-general-electric-logo-png-general-electric-company.png" alt="General Electric" width="128" height="128" loading="lazy" /></picture></div>
+              <!-- Loop Duplicates -->
+				      <div class="brand-item"><picture><source srcset="assets/Logos/Whirlpool_Corporation_Logo.webp" type="image/webp" /><img src="assets/Logos/Whirlpool_Corporation_Logo.png" alt="Whirlpool" width="200" height="67" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/Drean-logo.webp" type="image/webp" /><img src="assets/Logos/Drean-logo.png" alt="Drean" width="150" height="35" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/Longvie.webp" type="image/webp" /><img src="assets/Logos/Longvie.png" alt="Longvie" width="199" height="32" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/logo-Gafa-nuevo.webp" type="image/webp" /><img src="assets/Logos/logo-Gafa-nuevo.png" alt="Gafa" width="130" height="54" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/logo-Electrolux.webp" type="image/webp" /><img src="assets/Logos/logo-Electrolux.png" alt="Electrolux" width="384" height="216" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/Patrick-logo.webp" type="image/webp" /><img src="assets/Logos/Patrick-logo.png" alt="Patrick" width="152" height="41" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/KOH-I-NOOR_2025_efectos_alta.webp" type="image/webp" /><img src="assets/Logos/KOH-I-NOOR_2025_efectos_alta.png" alt="Kohinoor" width="100" height="42" loading="lazy" /></picture></div>
+              <div class="brand-item"><picture><source srcset="assets/Logos/121-1211603_transparent-general-electric-logo-png-general-electric-company.webp" type="image/webp" /><img src="assets/Logos/121-1211603_transparent-general-electric-logo-png-general-electric-company.png" alt="General Electric" width="128" height="128" loading="lazy" /></picture></div>
             </div>
           </div>
         </div>
@@ -156,39 +135,40 @@
           </div>
 
           <div class="bento-grid">
-            <!-- Lavarropas: Large Item (2x2 in 3rd col grid) -->
+            <!-- Lavarropas: Large Item (2x2) -->
             <div class="bento-item item-large">
               <div class="item-overlay"></div>
-              <img
-                src="assets/washing-machine-v2.png"
-                alt="Repuestos Lavarropas"
-              />
+              <picture>
+                <source srcset="assets/washing-machine-v2-mobile.webp 600w, assets/washing-machine-v2.webp 1024w" sizes="(max-width: 768px) 100vw, 66vw" type="image/webp" />
+                <img src="assets/washing-machine-v2.png" alt="Repuestos Lavarropas" width="1024" height="1024" loading="lazy" decoding="async" />
+              </picture>
               <div class="item-content">
                 <h3>Lavarropas</h3>
-                <p>
-                  Bombas de desagote, electroválvulas y plaquetas originales.
-                </p>
+                <p>Bombas de desagote, electroválvulas y plaquetas originales.</p>
                 <span class="item-tagline">Repuestos Originales</span>
               </div>
             </div>
 
-            <!-- Heladeras: Tall Item (1x2 in 3rd col grid) -->
+            <!-- Heladeras: Tall Item (1x2) -->
             <div class="bento-item item-tall">
               <div class="item-overlay"></div>
-              <img src="assets/refrigerator-v2.png" alt="Repuestos Heladeras" />
+              <picture>
+                <source srcset="assets/refrigerator-v2-mobile.webp 600w, assets/refrigerator-v2.webp 1024w" sizes="(max-width: 768px) 100vw, 33vw" type="image/webp" />
+                <img src="assets/refrigerator-v2.png" alt="Repuestos Heladeras" width="1024" height="1024" loading="lazy" decoding="async" />
+              </picture>
               <div class="item-content">
                 <h3>Heladeras</h3>
                 <p>Compresores, forzadores y termostatos de alta precisión.</p>
               </div>
             </div>
 
-            <!-- Row 3: Small Items (1x1 each) -->
+            <!-- Small Items -->
             <div class="bento-item">
               <div class="item-overlay"></div>
-              <img
-                src="assets/ac-parts-v2.png"
-                alt="Repuestos Aire Acondicionado"
-              />
+              <picture>
+                <source srcset="assets/ac-parts-v2.webp" type="image/webp" />
+                <img src="assets/ac-parts-v2.png" alt="Repuestos Aire Acondicionado" width="1024" height="1024" loading="lazy" decoding="async" />
+              </picture>
               <div class="item-content">
                 <h3>Aires Acondicionados</h3>
                 <p>Kit de instalación y ménsulas.</p>
@@ -197,7 +177,10 @@
 
             <div class="bento-item">
               <div class="item-overlay"></div>
-              <img src="assets/microwave-v2.png" alt="Repuestos Microondas" />
+              <picture>
+                <source srcset="assets/microwave-v2.webp" type="image/webp" />
+                <img src="assets/microwave-v2.png" alt="Repuestos Microondas" width="1024" height="1024" loading="lazy" decoding="async" />
+              </picture>
               <div class="item-content">
                 <h3>Microondas</h3>
                 <p>Magnetrones y platos.</p>
@@ -206,7 +189,10 @@
 
             <div class="bento-item">
               <div class="item-overlay"></div>
-              <img src="assets/dryer-v4.png" alt="Repuestos Secarropas" />
+              <picture>
+                <source srcset="assets/dryer-v4.webp" type="image/webp" />
+                <img src="assets/dryer-v4.png" alt="Repuestos Secarropas" width="1024" height="1024" loading="lazy" decoding="async" />
+              </picture>
               <div class="item-content">
                 <h3>Secarropas</h3>
                 <p>Frenos y amortiguadores.</p>
@@ -221,51 +207,20 @@
           <div class="contact-info">
             <div class="label">UBICACIÓN</div>
             <h2>Visitá nuestro local</h2>
-            <p>
-              Atención personalizada para técnicos y particulares. Tu repuesto
-              te espera en Pergamino.
-            </p>
+            <p>Atención personalizada para técnicos y particulares. Tu repuesto te espera en Pergamino.</p>
 
             <div class="info-grid">
               <div class="info-card">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                  <circle cx="12" cy="10" r="3" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" />
                 </svg>
-                <div class="details">
-                  <span>Dirección</span>
-                  <strong>Dr Alem 120, Pergamino</strong>
-                </div>
+                <div class="details"><span>Dirección</span><strong>Dr Alem 120, Pergamino</strong></div>
               </div>
               <div class="info-card">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
                 </svg>
-                <div class="details">
-                  <span>Horarios</span>
-                  <strong>08:30 – 12:00 | 14:30 – 18:30</strong>
-                </div>
+                <div class="details"><span>Horarios</span><strong>08:30 – 12:00 | 14:30 – 18:30</strong></div>
               </div>
             </div>
 
@@ -281,12 +236,10 @@
             </div>
           </div>
 
-          <div class="map-container">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.475456488795!2d-60.57342!3d-33.89012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b9f075d9e5b5e3%3A0x7d6b9c9f9a9e9a9a!2sDr.%20Alem%20120%2C%20Pergamino%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar"
-              loading="lazy"
-              allowfullscreen=""
-            ></iframe>
+          <div class="map-container" id="map-placeholder">
+            <div class="map-placeholder" style="display:flex;align-items:center;justify-content:center;height:100%;background:var(--surface);color:var(--text-muted);">
+              <span>Cargando mapa...</span>
+            </div>
           </div>
         </div>
       </section>
@@ -300,7 +253,21 @@
     </footer>
 
     <script>
-      // Reveal Animation Logic
+      const mapObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const mapContainer = entry.target;
+            mapContainer.innerHTML = `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3314.475456488795!2d-60.57342!3d-33.89012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b9f075d9e5b5e3%3A0x7d6b9c9f9a9e9a9a!2sDr.%20Alem%20120%2C%20Pergamino%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1620000000000!5m2!1ses!2sar" loading="lazy" allowfullscreen="" style="width:100%;height:100%;border:none;"></iframe>`;
+            mapObserver.unobserve(mapContainer);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '200px' });
+
+      const mapPlaceholder = document.getElementById('map-placeholder');
+      if (mapPlaceholder) {
+        mapObserver.observe(mapPlaceholder);
+      }
+
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -312,11 +279,9 @@
         { threshold: 0.1 },
       );
 
-      document
-        .querySelectorAll(".bento-item, .hero-content, .contact-wrapper")
-        .forEach((el) => {
-          observer.observe(el);
-        });
+      document.querySelectorAll(".bento-item, .hero-content, .contact-wrapper").forEach((el) => {
+        observer.observe(el);
+      });
     </script>
   </body>
 </html>
